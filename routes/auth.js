@@ -23,7 +23,8 @@ router.post(
     [
         check('email','El email es obligatorio').isEmail(),
         check('password','El password debe ser de 6 caracteres').isLength({min:6}),
-        validarCampos],
+        validarCampos
+    ],
     loginUsuario )
 
 router.get('/renew' , revalidarToken)
